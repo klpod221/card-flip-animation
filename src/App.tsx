@@ -13,7 +13,7 @@ function App() {
             <SneakCard
               card={{
                 name: cardName,
-                suit: Suit.Hearts,
+                suit: Suit.Spades,
                 value: 1,
                 isFacingDown: true,
                 isSentToPlayer: false,
