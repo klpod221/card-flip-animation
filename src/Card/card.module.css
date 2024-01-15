@@ -1,0 +1,61 @@
+.cardImage {
+  width: 250px;
+  height: 320px;
+}
+
+.longCard {
+  width: 220px;
+  height: 350px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flipCard {
+  background-color: transparent;
+  width: 250px;
+  height: 320px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  transition: opacity 2s, margin-top 0.5s;
+  opacity: 1;
+}
+
+/* This container is needed to position the front and back side */
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.25s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.revealed {
+  transform: rotateY(180deg);
+}
+
+.revealedCard2 {
+  transform: rotateX(180deg);
+}
+
+/* Position the front and back side */
+.cardFront,
+.cardBack {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.cardFront {
+  color: black;
+}
+
+/* Style the back side */
+.cardBack {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.cardSent {
+  margin-top: -500px !important;
+}

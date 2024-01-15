@@ -1,0 +1,54 @@
+.flipCard {
+  width: 250px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.back {
+  width: 250px;
+  height: 320px;
+}
+
+.leftContainer,
+.rightContainer,
+.bottomContainer,
+.topContainer {
+  width: 250px;
+  height: 320px;
+  position: absolute;
+  display: none;
+}
+
+.topContainer {
+  top: -320px;
+}
+
+.topContainer .front,
+.bottomContainer .front,
+.bottomContainer .shadow {
+  transform: rotate(180deg);
+}
+
+.leftContainer {
+  left: -250px;
+  top: 0px;
+}
+
+.rightContainer {
+  right: -250px;
+  top: 0px;
+}
+
+.front {
+  width: 250px;
+  height: 320px;
+}
+
+.shadow {
+  position: absolute;
+  top: 0px;
+  width: 250px;
+  height: 320px;
+  border-radius: 14px;
+}
